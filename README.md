@@ -10,8 +10,7 @@ The easiest way to install this Xcode theme is using **[Marathon](https://github
 
 1. Install the latest version of Marathon if you haven't already:
 ```
-$ git clone https://github.com/johnsundell/marathon.git
-$ cd Marathon && make
+$ brew install marathon-swift
 ```
 
 2. Run the install script which will install [Adobe's Source Code Pro](https://github.com/adobe-fonts/source-code-pro) font & this Xcode theme for you:
