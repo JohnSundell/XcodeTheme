@@ -15,7 +15,7 @@ $ brew install marathon-swift
 
 2. Run the install script which will install [Adobe's Source Code Pro](https://github.com/adobe-fonts/source-code-pro) font & this Xcode theme for you:
 ```
-marathon run johnsundell/xcodetheme
+$ marathon run johnsundell/xcodetheme
 ```
 
 ## Installing manually
