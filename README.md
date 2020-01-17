@@ -4,20 +4,21 @@ This repository contains the Xcode theme that I use. Feel free to use it or modi
 
 ![](Preview.png)
 
-## Installing using Marathon
+## Installing using Swift Package Manager
 
-The easiest way to install this Xcode theme is using **[Marathon](https://github.com/johnsundell/marathon):**
+The easiest way to install this Xcode theme is to clone this repo and execute `swift run`:
 
-1. Install the latest version of Marathon if you haven't already:
 ```
-$ git clone https://github.com/JohnSundell/Marathon.git
-$ cd Marathon
-$ make
+$ git clone https://github.com/johnsundell/xcodetheme.git
+$ cd XcodeTheme
+$ swift run
 ```
 
-2. Run the install script which will install [Adobe's Source Code Pro](https://github.com/adobe-fonts/source-code-pro) font & this Xcode theme for you:
+This will install [Adobe's Source Code Pro](https://github.com/adobe-fonts/source-code-pro) font and this Xcode theme for you. Afterward, you can remove the downloaded folder:
+
 ```
-$ marathon run johnsundell/xcodetheme
+$ cd ..
+$ rm -rf XcodeTheme
 ```
 
 ## Installing manually
