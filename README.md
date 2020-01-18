@@ -9,7 +9,7 @@ This repository contains the Xcode theme that I use. Feel free to use it or modi
 The easiest way to install this Xcode theme is to clone this repo and execute `swift run`:
 
 ```
-$ git clone https://github.com/johnsundell/xcodetheme.git
+$ git clone https://github.com/JohnSundell/XcodeTheme.git
 $ cd XcodeTheme
 $ swift run
 ```
