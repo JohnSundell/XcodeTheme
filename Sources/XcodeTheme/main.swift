@@ -1,8 +1,8 @@
 import Foundation
-import Files // marathon:https://github.com/JohnSundell/Files.git
-import ShellOut // marathon:https://github.com/JohnSundell/ShellOut.git
+import Files
+import ShellOut
 
-let fontsFolder = try Folder.home.subfolder(atPath: "Library/Fonts")
+let fontsFolder = try Folder.home.subfolder(at: "Library/Fonts")
 
 if !fontsFolder.containsFile(named: "SourceCodePro-Regular.ttf") {
     print("🅰️  Downloading Source Code Pro font...")
@@ -23,19 +23,17 @@ if !fontsFolder.containsFile(named: "SourceCodePro-Regular.ttf") {
     try fontZipFile.delete()
 }
 
-print("🎨  Downloading Xcode theme...")
-
-let themeURL = URL(string: "https://raw.githubusercontent.com/JohnSundell/XcodeTheme/master/SundellsColors.xccolortheme")!
-let themeData = try Data(contentsOf: themeURL)
-
 print("🎨  Installing Xcode theme...")
 
-let xcodeFolder = try Folder.home.subfolder(atPath: "Library/Developer/Xcode")
+let themeURL = URL(fileURLWithPath: #file.replacingOccurrences(of: "Sources/XcodeTheme/main.swift", with: "SundellsColors.xccolortheme"))
+let themeData = try Data(contentsOf: themeURL)
+
+let xcodeFolder = try Folder.home.subfolder(at: "Library/Developer/Xcode")
 let userDataFolder = try xcodeFolder.createSubfolderIfNeeded(withName: "UserData")
 let themeFolder = try userDataFolder.createSubfolderIfNeeded(withName: "FontAndColorThemes")
 
 let themeFile = try themeFolder.createFile(named: "SundellsColors.xccolortheme")
-try themeFile.write(data: themeData)
+try themeFile.write(themeData)
 
 print("")
 print("🎉 Sundell's Colors successfully installed")
